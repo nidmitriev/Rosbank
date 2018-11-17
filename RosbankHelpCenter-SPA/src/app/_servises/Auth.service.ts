@@ -7,7 +7,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = 'http://localhost:5000/api/questions/q_q';
+  baseUrl = 'http://localhost:5000/api/questions/';
   jwtHelper = new JwtHelperService();
   decodedToken: any;
   answer: string;
@@ -29,13 +29,12 @@ export class AuthService {
   }
 
   feedback(model: any) {
-    return this.http.post(this.baseUrl + model.problem, model).pipe(
+    return this.http.post(this.baseUrl + 'q_q', model).pipe(
       map((response: any) => {
-        const answer = response;
+        const answer = response[0];
+        if (answer) {
         this.answer = answer.answer;
-        // if (answer) {
-        // localStorage.setItem('answer', this.answer);
-        // }
+        }
       })
     );
   }

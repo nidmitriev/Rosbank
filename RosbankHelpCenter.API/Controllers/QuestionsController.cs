@@ -45,10 +45,10 @@ namespace RosbankHelpCenter.API.Controllers
             return Ok(questionToReturn);
         }
 
-        [HttpGet("q_q{user_question}")]
-        public async Task<IActionResult> GetQuestion(string user_question)
+        [HttpPost("q_q")]
+        public async Task<IActionResult> GetQuestion(QuestioinForThirdCallDto quest)
         {
-            var question = await _repo.GetQuestion(user_question);
+            var question = await _repo.GetQuestion(quest.Quest);
 
             //  нужно поставить ограничение на 5 лучших (??)
 
