@@ -13,23 +13,43 @@ namespace RosbankHelpCenter.API.Data
             _context = context;
         }
 
-        public void SeedUsers(){
+        public void SeedUsers()
+        {
             var userData = System.IO.File.ReadAllText("Data/UserSeedData.json");
             var users = JsonConvert.DeserializeObject<List<User>>(userData);
             foreach (var user in users)
             {
-                byte[] passwordHash,passwordSalt;
-                CreatePasswordHash("password",out passwordHash,out passwordSalt );
-                
+                byte[] passwordHash, passwordSalt;
+                CreatePasswordHash("password", out passwordHash, out passwordSalt);
+
                 user.PasswordHash = passwordHash;
                 user.PasswordSalt = passwordSalt;
                 user.Username = user.Username.ToLower();
-                
+
                 _context.Users.Add(user);
             }
 
             _context.SaveChanges();
         }
+
+        public void SeedStaffs()
+        {
+            var staffData = System.IO.File.ReadAllText("Data/StaffSeedData.json");
+            var staffs = JsonConvert.DeserializeObject<List<Staff>>(staffData);
+            foreach (var staff in staffs)
+                _context.Staffs.Add(staff);
+            _context.SaveChanges();
+        }
+
+        public void SeedQuestions()
+        {
+            var questionData = System.IO.File.ReadAllText("Data/QuestionSeedData.json");
+            var questions = JsonConvert.DeserializeObject<List<Question>>(questionData);
+            foreach (var quest in questions)
+                _context.Questions.Add(quest);
+            _context.SaveChanges();
+        }
+
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {

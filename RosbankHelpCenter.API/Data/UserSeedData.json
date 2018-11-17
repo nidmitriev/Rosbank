@@ -9,6 +9,8 @@
     "LastActive": "2017-02-10",
     "City": "Malott",
     "Country": "Uganda",
+    "BusinessType": "Средний бизнес",
+    "IsVIP": false,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/women/55.jpg",
@@ -27,6 +29,8 @@
     "LastActive": "2017-04-11",
     "City": "Cleary",
     "Country": "Oman",
+    "BusinessType": "Крупный бизнес",
+    "IsVIP": false,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/women/88.jpg",
@@ -45,6 +49,8 @@
     "LastActive": "2017-01-09",
     "City": "Loyalhanna",
     "Country": "Malta",
+    "BusinessType": "Малый бизнес",
+    "IsVIP": false,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/women/74.jpg",
@@ -63,6 +69,8 @@
     "LastActive": "2017-05-13",
     "City": "Umapine",
     "Country": "Gibraltar",
+    "BusinessType": "Средний бизнес",
+    "IsVIP": false,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/women/43.jpg",
@@ -81,6 +89,8 @@
     "LastActive": "2017-08-09",
     "City": "Linwood",
     "Country": "Anguilla",
+    "BusinessType": "Малый бизнес",
+    "IsVIP": false,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/women/68.jpg",
@@ -99,6 +109,8 @@
     "LastActive": "2017-01-29",
     "City": "Wiscon",
     "Country": "France, Metropolitan",
+    "BusinessType": "Крупный бизнес",
+    "IsVIP": false,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/men/50.jpg",
@@ -117,6 +129,8 @@
     "LastActive": "2017-06-13",
     "City": "Sunwest",
     "Country": "Chile",
+    "BusinessType": "Малый бизнес",
+    "IsVIP": false,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/men/87.jpg",
@@ -135,6 +149,8 @@
     "LastActive": "2017-02-14",
     "City": "Tyhee",
     "Country": "Lithuania",
+    "BusinessType": "Малый бизнес",
+    "IsVIP": true,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/men/16.jpg",
@@ -153,6 +169,8 @@
     "LastActive": "2017-06-17",
     "City": "Sugartown",
     "Country": "Cote D'Ivoire (Ivory Coast)",
+    "BusinessType": "Средний бизнес",
+    "IsVIP": true,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/men/59.jpg",
@@ -171,6 +189,8 @@
     "LastActive": "2017-05-23",
     "City": "Ola",
     "Country": "Grenada",
+    "BusinessType": "Крупный бизнес",
+    "IsVIP": true,
     "Photos": [
       {
         "url": "https://randomuser.me/api/portraits/men/14.jpg",

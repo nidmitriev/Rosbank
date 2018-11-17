@@ -1,0 +1,22 @@
+[
+    {
+      "MailForVip": "beckyfuentes1@niquent.com",
+      "MailForNotVip": "beckyfuentes2@niquent.com"
+    },
+    {
+      "MailForVip": "beckyfuentes3@niquent.com",
+      "MailForNotVip": "beckyfuentes4@niquent.com"
+    },
+    {
+      "MailForVip": "beckyfuentes5@niquent.com",
+      "MailForNotVip": "beckyfuentes6@niquent.com"
+    },
+    {
+      "MailForVip": "beckyfuentes7@niquent.com",
+      "MailForNotVip": "beckyfuentes8@niquent.com"
+    },
+    {
+      "MailForVip": "beckyfuentes9@niquent.com",
+      "MailForNotVip": "beckyfuentes10@niquent.com"
+    }
+  ]
