@@ -8,5 +8,6 @@ namespace RosbankHelpCenter.API.Models
         public string Quest {get; set;}
         public string Aswer {get; set;}
         public Staff StaffMail {get; set;}
+        public int IndexOfPop { get; set; }
     }
 }
