@@ -10,6 +10,9 @@ namespace RosbankHelpCenter.API.Data
          void Delete<T>(T entity) where T: class;
          Task<bool> SaveAll();
          Task<IEnumerable<User>> GetUsers();
+         Task<IEnumerable<Question>> GetQuestions();
          Task<User> GetUser(int id);
+         Task<IEnumerable<Question>> GetQuestion(bool type);
+         Task<IEnumerable<Question>> GetQuestion(string user_question);
     }
 }

@@ -24,6 +24,9 @@ namespace RosbankHelpCenter.API.Helpers
                     opt.ResolveUsing(d => d.DateOfBirth.CalculateAge());
                 });
             CreateMap<Photo, PhotosForDetailedDto>();
+            CreateMap<Question, QuestionForSecondCall>();
+           
+            
         }
     }
 }

@@ -1,9 +1,12 @@
-namespace RosbankHelpCenter.API.Models
+using System;
+using System.Collections.Generic;
+using RosbankHelpCenter.API.Models;
+
+namespace RosbankHelpCenter.API.Dtos
 {
-    public class Question
+    public class QuestionForListDto
     {
-         public int Id { get; set; }
-        public bool Type {get; set; }
+        public int Id { get; set; }
         public string Theme {get; set;}
         public string SubTheme {get; set;}
         public string Quest {get; set;}

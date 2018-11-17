@@ -88,9 +88,9 @@ namespace RosbankHelpCenter.API
 
             // app.UseHttpsRedirection();
             //recomment for seeding
-            //seeder.SeedUsers();
-           //seeder.SeedStaffs();
-           //seeder.SeedQuestions();
+            //  seeder.SeedUsers();
+            //  seeder.SeedStaffs();
+            //  seeder.SeedQuestions();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();
             app.UseMvc();

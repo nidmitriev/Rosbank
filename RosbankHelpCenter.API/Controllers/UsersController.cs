@@ -9,7 +9,7 @@ using RosbankHelpCenter.API.Dtos;
 
 namespace RosbankHelpCenter.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase

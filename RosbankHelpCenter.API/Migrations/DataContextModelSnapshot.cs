@@ -43,7 +43,7 @@ namespace RosbankHelpCenter.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Aswer");
+                    b.Property<string>("Answer");
 
                     b.Property<int>("IndexOfPop");
 
@@ -54,6 +54,8 @@ namespace RosbankHelpCenter.API.Migrations
                     b.Property<string>("SubTheme");
 
                     b.Property<string>("Theme");
+
+                    b.Property<bool>("Type");
 
                     b.HasKey("Id");
 
