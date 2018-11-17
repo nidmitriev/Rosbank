@@ -1,0 +1,19 @@
+<form #feedbackForm="ngForm" (ngSubmit)="feedback()" class="form-signin">
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-wide">Feedbackk form</h1>
+  </div>
+
+  <div class="form-label-group mb-4">
+    <label for="inputEmail">Your problem, please!</label>
+    <input type="email" id="inputProblem" class="form-control" required name="problem" [(ngModel)]="model.problem"
+      placeholder="Your problem" required="" autofocus="">
+  </div>
+
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-3 font-weight-wide">{{authService.answer}}</h1>
+  </div>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">feedback</button>
+  <button class="btn btn-lg btn-primary btn-block" type="button" (click)="cancel()">Cancel</button>
+  <p class="mt-5 mb-3 text-muted text-center">© 2017-2018</p>
+</form>
