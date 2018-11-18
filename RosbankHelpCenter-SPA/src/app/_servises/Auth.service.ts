@@ -8,7 +8,7 @@ import { ExpansionCase } from '@angular/compiler';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = 'http://localhost:5000/api/questions/';
+  baseUrl = 'http://f90d9e44.ngrok.io/api/questions/';
   jwtHelper = new JwtHelperService();
   decodedToken: any;
   answer: any;

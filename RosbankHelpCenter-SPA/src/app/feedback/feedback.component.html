@@ -20,6 +20,7 @@
     <a href="" class="mb-3 font-weight-wide">{{ quest.theme }}</a>
   </div>
   <button
+    id="my_centered_buttons"
     [disabled]="!loginForm.valid"
     class="btn btn-lg btn-primary btn-block"
     type="submit"
@@ -30,7 +31,7 @@
     *ngIf="authService.ExactlySolWasFound"
     class="col-md-8 my-elem body-elem"
   >
-    <h1 class="featurette-heading">
+    <h1 class="featurette-heading mb-4">
       Повезло тебе! <span class="text-muted">Найдено точное решение.</span>
     </h1>
     <p>{{ authService.answer[0].answer }}</p>
