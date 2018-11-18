@@ -24,10 +24,10 @@ namespace RosbankHelpCenter.API.Controllers
             _repo = repo;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetQuestions()
+        [HttpPost]
+        public async Task<IActionResult> GetQuestions(QuestioinForThirdCallDto quest)
         {
-           
+
             var questions = (await _repo.GetQuestions());
 
             var questionsToReturn = _mapper.Map<IEnumerable<QuestionForListDto>>(questions);
@@ -48,6 +48,8 @@ namespace RosbankHelpCenter.API.Controllers
         [HttpPost("q_q")]
         public async Task<IActionResult> GetQuestion(QuestioinForThirdCallDto quest)
         {
+            if (quest.Quest == null)
+                return Ok();
             var question = await _repo.GetQuestion(quest.Quest);
 
             var questionToReturn = _mapper.Map<IEnumerable<QuestionForSecondCall>>(question);

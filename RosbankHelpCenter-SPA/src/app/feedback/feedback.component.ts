@@ -36,7 +36,16 @@ export class FeedbackComponent implements OnInit {
         }
       },
       error => {
-        this.alertify.error(error);
+      }
+    );
+  }
+  getPopularQuests() {
+    this.authService.popularQuests = null;
+    this.authService.getPopularQuests(this.model).subscribe(
+      () => {
+        this.alertify.success(
+          'Обратите внимание на выборку популярных вопросов!'
+        );
       }
     );
   }
@@ -44,6 +53,4 @@ export class FeedbackComponent implements OnInit {
   cancel() {
     this.cancelFeedback.emit(false);
   }
-
-  checkAmountSol() {}
 }

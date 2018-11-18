@@ -10,6 +10,7 @@ namespace RosbankHelpCenter.API.Data
     public class DatingRepository : IDatingRepository
     {
         private readonly int AmountOfSugestions = 3;
+        private readonly int AmountOfPopularQuestsForView = 6;
         private readonly DataContext _context;
 
         public DatingRepository(DataContext context)
@@ -73,7 +74,7 @@ namespace RosbankHelpCenter.API.Data
             //будем возвращать соответственно популярности
             var questions = (await _context.Questions.ToListAsync()).OrderByDescending(q => q.IndexOfPop);
 
-            return questions;
+            return questions.Take(AmountOfPopularQuestsForView);
         }
         public async Task<bool> SaveAll()
         {

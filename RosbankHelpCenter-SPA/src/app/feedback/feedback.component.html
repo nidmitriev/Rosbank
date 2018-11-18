@@ -1,38 +1,48 @@
 <!-- Example row of columns -->
-  
-  <form #loginForm="ngForm" (ngSubmit)="feedback()">
-    <div class="mb-4">
+
+<form #loginForm="ngForm" (ngSubmit)="feedback()">
+  <div class="mb-4">
     <h1 class="h3 mb-3 font-weight-wide">Форма обратной связи</h1>
   </div>
-    <input  
-      class="form-control mr-sm-2 mb-4"
-      type="text"
-      name="quest"
-      placeholder="Question"
-      required
-      [(ngModel)]="model.quest"
-    />
-    <button
-      [disabled]="!loginForm.valid"
-      class="btn btn-lg btn-primary btn-block"
-      type="submit"
-    >
-      Get solution!
-    </button>
-    <div *ngIf="authService.ExactlySolWasFound" class="col-md-8 my-elem body-elem">
-        <h1 class="featurette-heading">
-            Повезло тебе!
-            <span class="text-muted">Найдено точное решение.</span>
-          </h1>
-        <p>{{authService.answer[0].answer}}</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-      </div>
-    <button
-      class="btn btn-lg btn-primary btn-block"
-      type="button"
-      (click)="cancel()"
-    >
-      Cancel
-    </button>
-  </form>
- 
+
+  <input
+    class="form-control mr-sm-2 mb-4"
+    type="text"
+    name="quest"
+    placeholder="Question"
+    required
+    [(ngModel)]="model.quest"
+  />
+  <button class="btn btn-lg btn-primary btn-block mb-4" (click)="getPopularQuests()">
+    Глянуть популярные!
+  </button>
+  <div *ngFor="let quest of authService.popularQuests" class="mb-4">
+    <a href="" class="mb-3 font-weight-wide">{{ quest.theme }}</a>
+  </div>
+  <button
+    [disabled]="!loginForm.valid"
+    class="btn btn-lg btn-primary btn-block"
+    type="submit"
+  >
+    Получить решение!
+  </button>
+  <div
+    *ngIf="authService.ExactlySolWasFound"
+    class="col-md-8 my-elem body-elem"
+  >
+    <h1 class="featurette-heading">
+      Повезло тебе! <span class="text-muted">Найдено точное решение.</span>
+    </h1>
+    <p>{{ authService.answer[0].answer }}</p>
+    <p>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </p>
+  </div>
+  <button
+    class="btn btn-lg btn-primary btn-block"
+    type="button"
+    (click)="cancel()"
+  >
+    Отмена
+  </button>
+</form>

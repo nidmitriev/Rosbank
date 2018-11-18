@@ -12,6 +12,7 @@ export class AuthService {
   jwtHelper = new JwtHelperService();
   decodedToken: any;
   answer: any;
+  popularQuests: any;
   defaultString = 'Where is my answer?';
   ExactlySolWasFound = false;
 
@@ -36,16 +37,27 @@ export class AuthService {
         const answer = response;
         if (answer) {
           this.answer = answer;
-          localStorage.setItem('answer1', this.answer[0].answer);
-          localStorage.setItem('answer2', this.answer[1].answer);
-          localStorage.setItem('answer3', this.answer[2].answer);
         }
         if (answer[1] == null) {
           this.ExactlySolWasFound = true;
         } else {
           localStorage.setItem('answer1', this.answer[0].answer);
+          localStorage.setItem('theme1', this.answer[0].theme);
           localStorage.setItem('answer2', this.answer[1].answer);
+          localStorage.setItem('theme2', this.answer[1].theme);
           localStorage.setItem('answer3', this.answer[2].answer);
+          localStorage.setItem('theme3', this.answer[2].theme);
+        }
+      })
+    );
+  }
+
+  getPopularQuests(model: any) {
+    return this.http.post(this.baseUrl, model).pipe(
+      map((response: any) => {
+        const quests = response;
+        if (quests) {
+          this.popularQuests = quests;
         }
       })
     );
