@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RosbankHelpCenter.API.Migrations
 {
-    public partial class Somethingnew2 : Migration
+    public partial class FinishMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

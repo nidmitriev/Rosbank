@@ -9,8 +9,8 @@ using RosbankHelpCenter.API.Data;
 namespace RosbankHelpCenter.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20181117124109_Something new2")]
-    partial class Somethingnew2
+    [Migration("20181117220124_FinishMigration")]
+    partial class FinishMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

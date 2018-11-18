@@ -18,6 +18,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { MemberListComponent } from './member-list/member-list.component';
 import { appRoutes } from './routes';
 import { AuthGuard } from './_guards/auth.guard';
+import { ProblemComponent } from './problem/problem.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AuthGuard } from './_guards/auth.guard';
       FeedbackComponent,
       ListsComponent,
       MessagesComponent,
-      MemberListComponent
+      MemberListComponent,
+      ProblemComponent
    ],
    imports: [
       BrowserModule,

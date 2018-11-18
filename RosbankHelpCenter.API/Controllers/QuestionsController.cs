@@ -50,8 +50,6 @@ namespace RosbankHelpCenter.API.Controllers
         {
             var question = await _repo.GetQuestion(quest.Quest);
 
-            //  нужно поставить ограничение на 5 лучших (??)
-
             var questionToReturn = _mapper.Map<IEnumerable<QuestionForSecondCall>>(question);
 
             return Ok(questionToReturn);
